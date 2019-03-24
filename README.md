@@ -27,6 +27,8 @@ fibonacci (n :int) :int =                   -- return Fibonacci sequence
 ## Abstract
 **pipe** is a *research proposal* to create conceptual programming language that is sufficient to become Intermediate Representation (IR) for human thoughts. Despite being a research project pipe strives to be as *pragmatic* as possible. It is an attempt to distinguish narrow line among different programming languages, DSLs and even declarative notations to form generalized *semantic core* that will be sufficient to further interpolate as *Human* Intermediate Representation (HIR).
 
+
+
 ## Historical background
 Design and comprehension of programming language is a key to understand why there is hardware *in the first place*.
 

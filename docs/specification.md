@@ -40,7 +40,7 @@ This document describes core semantics and syntax of the language. It includes s
       7. Parallel execution
       8. Invariants, pre-/post-conditions
       9. Garbage collector
-4. [Syntax grammar]()
+4. [Syntax / grammar]()
    1. Source files
    2. Text / code
       1. Expression vs statements
@@ -52,4 +52,11 @@ This document describes core semantics and syntax of the language. It includes s
       1. Logic
       2. Math
       3. Precedence
-   7. 
+5. Implementation
+
+<!--
+C++ 3 catagories of language entities:
+1. object declarations 
+2. expressions and operators
+3. types
+-->

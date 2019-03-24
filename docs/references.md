@@ -10,6 +10,63 @@ Format:
    [Done]
 -->
 
+## Readings
+1. **Gabriel Dos Reis**
+   1. A Principled, Complete, and Efficient Representation of C++
+2. **Paul Graham**
+   1. On Lisp <!--Book-->
+   2. [Revenge of the Nerds](http://paulgraham.com/icad.html) <!--Dec 18.18 / Done-->
+   3. [Programming Bottom-Up](http://paulgraham.com/progbot.html) <!--Dec 24.18 / Done-->
+   4. [To Start a Startup](http://paulgraham.com/start.html) <!--Dec 24.18 / Done-->
+   5. The Hundred-Year Language
+   6. Succinctness is Power
+3. **Bjarne Stroustrup**
+   1. Exception Handling for C++ (Andrew Koenig) <!--Jan 16.19-->
+4. **Gerald Jay Sussman and Hal Abelson**
+   1. Structure and Interpretation of Computer Programs <!--Book-->
+5. **Sergey Dmitriev** [JetBrains]
+   1. [Language Oriented Programming: The Next Programming Paradigm](http://www.onboard.jetbrains.com/is1/articles/04/10/lop/) <!--Bookook-->
+   2. JetBrains MPS (YouTube)
+6. **Noam Nisan, Shimon Schocken**
+   1. Papers from [Nand2Tetris](https://www.nand2tetris.org/papers)
+   2. The Elements of Computing Systems <!--Book-->
+7. **Niklaus Wirth**
+   1. Algorithms + Data Structures = Programs <!--Book-->
+8. **Donald Knuth**
+   1. The Art of Programming <!--Book-->
+   2. Stanford GraphBase: A Platform for Combinatorial Computing <!--Book-->
+9.  **Dale Fisk**
+   3. Programming with Punched Cards <!--Nov 24.18-->
+10. **Adam Brooks Webber**
+    1. Modern Programming Languages: A Practical Introduction <!--Book-->
+11. **Robert W. Sebesta**
+    1. Concepts of Programming Languages <!--Book-->
+12. **Allen Cypher**
+    1. Watch What I Do: Programming by Demonstration <!--Book-->
+13. **Olivier Breuleux** 
+    1. O-expressions
+14. **J. P. Haverty and R. L. Patrick**
+    1. Programming Languages and Standardization in Command and Control
+15. **Matthias Müller-Prove**
+    1. Vision and Reality of Hypertext and Graphical User Interfaces <!--Thesis-->
+    2. The Reactive Engine or FLEX language
+16. **Bertrand Meyer**
+    1. Eiffel: The Language <!--Book-->
+17. **Frederick Brooks**
+    1. The Mythical Man-Month <!--Book-->
+18. **Jon Bentley**
+    1. Programming Pearls <!--Book-->
+19. **Francesc Hervada-Sala**
+    1. The Text Engine <!--Dec 22.18 / Done-->
+
+#### Secondary
+1. Benjamin C. Pierce
+    1. Types and Programming Languages <!--Book-->
+2. Daniel P. Friedman, Mitchell Wand
+    1.  Essentials of Programming Languages <!--Book-->
+3. https://scripts.sil.org/cms/scripts/page.php?id=IWS-Chapter02&site_id=nrsi#0049c6a9
+
+
 ## Engineering Projects
 List of educational and engineering projects that help pipe to round out the experience and expertise:
 
@@ -18,6 +75,7 @@ List of educational and engineering projects that help pipe to round out the exp
 3. [Handmade Hero](https://handmadehero.org/). Casey Muratori
 4. [Nand2Tetris](https://www.nand2tetris.org/). Noam Nisan and Shimon Schocken 
 5. [SLang](https://dl.acm.org/citation.cfm?id=3166095). Eugene Zouev
+
 
 ## Influenced by
 List of languages and different formats against which pipe is comparing, inspiring and evolving:
@@ -42,61 +100,6 @@ List of languages and different formats against which pipe is comparing, inspiri
 - COBOL, ALGOL
 - [List of most common words](https://en.wikipedia.org/wiki/Most_common_words_in_English) (in English)
 
-## Readings
-1. **Paul Graham**
-   1. On Lisp <!--Book-->
-   2. [Revenge of the Nerds](http://paulgraham.com/icad.html) <!--Dec 18.18 / Done-->
-   3. [Programming Bottom-Up](http://paulgraham.com/progbot.html) <!--Dec 24.18 / Done-->
-   4. [To Start a Startup](http://paulgraham.com/start.html) <!--Dec 24.18 / Done-->
-   5. The Hundred-Year Language
-   6. Succinctness is Power
-2. **Bjarne Stroustrup**
-   1. Exception Handling for C++ (Andrew Koenig) <!--Jan 16.19-->
-3. **Gerald Jay Sussman and Hal Abelson**
-   1. Structure and Interpretation of Computer Programs <!--Book-->
-4. **Sergey Dmitriev** [JetBrains]
-   1. [Language Oriented Programming: The Next Programming Paradigm](http://www.onboard.jetbrains.com/is1/articles/04/10/lop/) <!--Bookook-->
-   2. JetBrains MPS (YouTube)
-5. **Noam Nisan, Shimon Schocken**
-   1. Papers from [Nand2Tetris](https://www.nand2tetris.org/papers)
-   2. The Elements of Computing Systems <!--Book-->
-6. **Niklaus Wirth**
-   1. Algorithms + Data Structures = Programs <!--Book-->
-7. **Donald Knuth**
-   1. The Art of Programming <!--Book-->
-   2. Stanford GraphBase: A Platform for Combinatorial Computing <!--Book-->
-8. **Dale Fisk**
-   1. Programming with Punched Cards <!--Nov 24.18-->
-9.  **Adam Brooks Webber**
-    1. Modern Programming Languages: A Practical Introduction <!--Book-->
-10. **Robert W. Sebesta**
-    1. Concepts of Programming Languages <!--Book-->
-11. **Allen Cypher**
-    1. Watch What I Do: Programming by Demonstration <!--Book-->
-12. **Olivier Breuleux** 
-    1. O-expressions
-13. **J. P. Haverty and R. L. Patrick**
-    1. Programming Languages and Standardization in Command and Control
-14. **Matthias Müller-Prove**
-    1. Vision and Reality of Hypertext and Graphical User Interfaces <!--Thesis-->
-    2. The Reactive Engine or FLEX language
-15. **Bertrand Meyer**
-    1. Eiffel: The Language <!--Book-->
-16. **Frederick Brooks**
-    1. The Mythical Man-Month <!--Book-->
-17. **Jon Bentley**
-    1. Programming Pearls <!--Book-->
-18. **Francesc Hervada-Sala**
-    1. The Text Engine <!--Dec 22.18 / Done-->
-
-
-#### Secondary
-1. Benjamin C. Pierce
-    1. Types and Programming Languages <!--Book-->
-2. Daniel P. Friedman, Mitchell Wand
-    1.  Essentials of Programming Languages <!--Book-->
-3. https://scripts.sil.org/cms/scripts/page.php?id=IWS-Chapter02&site_id=nrsi#0049c6a9
-
 
 ## People
 [Game hackers]
@@ -118,7 +121,6 @@ List of languages and different formats against which pipe is comparing, inspiri
 - Matthias Müller-Prove. FLEX language
 - Francesc Hervada-Sala. Text engine
 
-
 ### Unsorted
-- https://github.com/dotnet/roslyn/wiki/Roslyn%20Overview (Source Static Analyzer)
-- 
+- https://github.com/dotnet/roslyn/wiki/Roslyn
+- https://github.com/GabrielDosReis/ipr

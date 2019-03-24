@@ -3,20 +3,22 @@ Many of pipe features are quite unique and an abstract description alone hardly 
 
 ### Quick jumps
 1. Rethink programming notation
-2. [Meta-programming & Self-modifiable code]()
-3. [Reflection and Semantic search]()
-4. [SQL as part of the language]()
-5. [In-code shell]()
-6. [Code embedding]()
+2. [Code embedding or self-modifiable code]()
+3. [Reflection]()
+4. [Semantic search]()
+5. [SQL as part of the language]()
+6. [In-code shell]()
 7. [Pre, post-conditions and invariants]()
 8. [Optional types]()
-9. First-class
-10. Interface
+9.  First-class X
+10. Interfaces
 
 ## Rethink programming notation
-pipe tries to gather best practices and give innovative view how modern programming language should look like. No semicolons, no tabular spaces, no structs, no classes, optional curly brackets and build-in (re)formatting. 
+**pipe** tries to gather best practices and give innovative view how modern programming language should look like. No semicolons, no tabular spaces, no structs, no classes, optional curly brackets and build-in (re)formatting. 
 
-pipe is a balance b/w modern "sleekness" and time-proofed techniques that served us making less keystrokes, distinguish structure and write well-formed code.
+**pipe** is a balance b/w modern "sleekness" and time-proofed techniques that still serve us making less keystrokes, distinguish structure and write well-formed code.
+
+**pipe** strives to eliminate ambiguous interpretations, [overchoice phenomenon](https://en.wikipedia.org/wiki/Overchoice) and contradictions between visible code flow and implied semantics.
 
 ### Static / dynamic types
 ```
@@ -25,11 +27,14 @@ pi := 3.14                        -- auto type detection
 x = 0                             -- dynamic types (expression-oriented programming)
 x = (1, false, "hello", 3.14)     -- no error
 ```
+
 ### Simple run-time reflection
+pipe uses `%` symbol to reflect identifier and access its properties or "meta" information.
 ```
 print %x.Type == :untyped         -- true
 print (%x .Type, .Name)           -- ":untyped x"
 ```
+
 ### Contexted multi-line treatment
 ```
 names :str[] =                    -- multiline assignment
@@ -45,6 +50,7 @@ print
   title 
   names..                         -- unfold `names` and print each item
 ```
+
 ### Concise encapsulation
 Identifier should carry meaning! Now is it constant or variable, "private" or "protected" is derived from name.
 ```
@@ -54,6 +60,7 @@ Var   := "Hello"                  -- exported variable
 var   := "World"                  -- unexported variable
                                   -- the same naming rules apply for all types of labels
 ```
+
 ### Group assignment
 ```
 i, j, k := 1                      
@@ -62,6 +69,7 @@ x := y := 4
 
 print i, j, k, a, b, x, y         -- "1 1 1 2 3 4 4"
 ```
+
 ### Static, multidimensional and dynamic arrays
 ```
                                       -- array initialization
@@ -78,6 +86,7 @@ arr1D[2:4]                        -- range
 arr1D[1,4]                        -- selected
 arr3D[1][2][3]                    -- nested selection (classic)
 ```
+
 ### Uniform Function Call (UFC)
 ```                                  
 sum (a, b :int) :int => a + b
@@ -92,7 +101,8 @@ print(obj .p1, .p2)               -- "1, 2"
 print(obj.p1, obj.p2)             -- "1, 2"
 print obj> .p1 add .p2            -- "3" (namespace carrying)
 ```
-### Function, procedure or transition?
+
+### () = function, procedure, lambda, etc.
 ```
                                   -- or
   .IsObsolete () :bool = {
@@ -101,7 +111,12 @@ print obj> .p1 add .p2            -- "3" (namespace carrying)
                                   -- or
   .IsObsolete () :bool => .age > 100
 ```
-### Compound types + named fields = ?
+
+### Recursive paradise
+```
+```
+
+### Compound types + named fields = X
 Want to create struct, class, container, unit, records or just a structure with named fields? There is no name for this anymore. Just use concept of **compound types** and **named fields**
 ```
 Human = :{                        
@@ -122,9 +137,9 @@ Robot = :{
   .IsObsolete () :bool =             
     ret .age > 100
 
-Humanoid = :{                     -- type composition
-  :Robot                          -- "squash" or unfold type members here
-  :Human                          -- despite being squashed, explicit path always preserved  
+Humanoid = :{                     -- compound type
+  :Robot                          -- type embedding or squash/unfold type members 
+  :Human                          -- despite embedding, explicit path always preserved  
   age :int
   Name :str 
 }
@@ -134,30 +149,69 @@ me :Humanoid =                    -- create new :Humanoid
   .Blood = true 
                                   -- other fields initialized with 0/nulls
 
-me.Robot.Speak()                  -- "I am 0"
-me.Human.Speak()                  -- "My name is Arnold"
+me:Robot.Speak()                  -- "I am 0"
+me:Human.Speak()                  -- "My name is Arnold"
 me.Speak()                        -- "My name is Arnold"
-                                  -- order matters, :Human "overloading precedence" is higher
-                                  -- when ambiguous just use explicit path
+                                  -- order matters, :Human "overriding precedence" is higher
+                                  -- when ambiguous just use explicit path (experimental)
 ```
+
 ### Type casting
+Type casting as simple as that:
 ```
 x = 1
 y :int = :int(x)
 -- Hm... What if I want to check whether it can be casted or not? Otherwise, just set it to 0
 z :int = :int(x) == :int ? x : 0  -- solution
 ```
-### Interfaces?
-In pipe there is no separate notion for **interface**. Instead, simple check if type *comply* to other type during the casting serve as a technique to generalize different concepts about the same thing.
+
+### Interfaces
+In pipe there is no separate notion for **interface**. Instead, simple check if type *complies* to other type during casting or argument passing serve as a technique to generalize different concepts about the same thing.
 ```
-IHumanoid = :{
+IHumanoid = :{                    -- or Humanoider if you like
   Speak ()
   Blood :bool | Model :int
 }
 
 if :IHumanoid(me)                 -- check type compliance
-  print "I'm either Human or Robot!"
+  print "Yes! I don't know if I'm Human or Robot!"
+
+Sayer (:IHumanoid h) = h.Speak()
+Sayer(me)                         -- "My name is Arnold", see previous section
 ```
+
+### Overloading and overriding
+Just to recap: **overloading** means 2 methods with the same name and different signatures (including return value); **overriding** means 2 methods with the same name and signature but different body.
+```
+-- Overloading
+plus (a, b :int)
+plus (a, b :str)
+plus (a, b :float) =              -- should be self-explanatory
+  ret a + b
+
+-- Overriding (1) direct
+minus (a, b :int) => a - b 
+minus (a, b :int) => a + b        -- error
+
+-- Overriding (2) through inheritance
+Vector = :int[2]                  -- define type
+
+:Vector.add (:Vector v) =         -- add `add` method
+  .[0] += v[0]                    
+  .[1] += v[1]
+
+AVector = :{                      -- define new annotated vector
+  :Vector
+  counter :int
+}
+
+:AVector.add (:AVector v) =
+  .:Vector.add(:Vector(v))         -- type casting
+  .counter++
+```
+As you can see it is not real "overriding" rather than method hiding. You *always* has an access to inherited methods through explicit path. In our case: `:AVector:Vector.add()`
+
+
 ### Default type values
 It might be strange but types (excerpt build-in ones) can have default values. 
 ```
@@ -168,7 +222,7 @@ x :myInt
 print x                           -- "10"
 ```
 
-### Where is main() BTW?
+### Where is main() by the way?
 Optional, unless one wants it to define *explicitly*
 ```
 import pipe/io
@@ -217,6 +271,11 @@ strictSum (a, b :int) :int =
 
 ```
 
+## Symbolic computation
+pipe proposes simple mechanism for converting mathematical expressions back and forth between LaTeX math notation and pipe's math expressions.
+
+Tags: symbolic mathematics, algebraic computations
+
 
 ## Lisp rebirth
 Do you remember the magic of Lisp? Its simple syntax and number of primitives still cause people feel of adoration and rumors that anyone who enters Computer Science *must* learn it at least once. Indeed Lisp's philosophy is hardly exhaustive but what happens inside is simply *Stack machine* + *Polish prefix notation*. pipe found both suitable for backing internal AST logic and express semantic core. It makes transfer to existing infrastructure of back-ends, hardware platforms and VMs much easier. Thus, while you write pipe code, you can think of it as *syntactic sugar* on top of polish notation to simplify verbosity and facilitate your mental habits.
@@ -243,10 +302,11 @@ ast.Import `
 ```
 pipe highly discourage mixing both syntaxes under one roof. That's why it will require  either additional steps or explicit flag to use.
 
+
+
 ## Homogeneous type system
 There is no difference between build-in types or user-defined all types follow and defined under the same rules. The only difference is that primitive types are well optimized for hardware and always be used during optimization stage when possible. However, to distinguish build-in types from user-defined pipe made a little exception - they are lowercase despite being "imported" from stdlib. It is forbidden in normal cases.
 
-## Reflection
 
 
 ## Code analysis 
@@ -288,8 +348,10 @@ stdout.print(result.. .Sign)  -- unfold array and append .Sign per each item
                               -- "minus (a, b :int) :int"
 ```
 
+
+
 ## Code embedding
-pipe introduces **window**s. Using `@{...}` you can inject logic right into the text. File format doesn't matter. You can include other files, import libraries, apply control flow, I/O and all other functionality available in normal code.
+pipe introduces **windows**. Using `@{...}` you can inject logic right into the text. File format doesn't matter. You can include files, import libs, apply control flow, I/O and all other functionality available in normal code but just withing the windows.
 
 ```html
 <!--index.p.html-->
@@ -305,9 +367,9 @@ pipe introduces **window**s. Using `@{...}` you can inject logic right into the 
   </ul>
 </body>
 ```
-Optionally, pipe can automatically hide/unhide its "presence" by commenting out all its windows and identifiers used across the file:
+Optionally, pipe can automatically hide/unhide its "presence" by commenting out its windows and identifiers used across the file:
 ```bash
-pipe --injected index.p.html --hide index.html
+pipe pre --hide index.p.html index.html
 ```
 ```html
 <!--@{
@@ -323,7 +385,7 @@ pipe --injected index.p.html --hide index.html
 </body>
 ```
 ```
-pipe --injected index.p.html index.html
+pipe pre index.p.html index.html
 ```
 ```html
 <title>My favorite colors</title>
@@ -336,8 +398,38 @@ pipe --injected index.p.html index.html
   </ul>
 </body>
 ```
-What about pipe files itself? The same! But only *one level* of nesting. This is proposed answer for all sorts of "meta-programming" and preprocessing features.
+What about pipe files itself? The same! But only *one level* of nesting as with other files. This is proposed answer for all sorts of "meta-programming", "generative programming" and preprocessing features. pipe see no difference b/w "preprocessing language" and standard one.
+```
+-- main.p
 
+@{
+  importList := ("io", "ast", "json")
+  for v := importList..
+}
+    <<<0                          -- return indentation of affected sub-block back to 0 level
+    import pipe/$v
+
+imported := $%importList.len      -- reflect list to get its "meta" length
+print imported
+```
+```
+pipe pre main.p
+```
+```
+-- main.p
+
+import pipe/io
+import pipe/ast
+import pipe/json
+
+imported := 3      -- reflect list to get its "meta" length
+print imported
+```
+
+### Quine
+```
+simple example of producing a copy of its own source code 
+```
 <!--
 ## What one's language should support
 
