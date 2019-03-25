@@ -1,8 +1,11 @@
-# Comparison
+# Compare pipe to other languages
+[Return to the beginning](README.md#get-started)<br/>
 
-This document is intended for people who already know programming and want to take a "taste" how different problems can be solved by pipe comparing to other the most popular languages. The examples do not pretend to be the most ideomatic and optimal solution for a given task. 
+This document is intended for people who already know some programming languages and want to get a "taste" how different semantic constructions can be expressed by pipe. The examples do not pretend to be most ideomatic, precise and optimal. Also, there was no goal to cover every aspect of the language. Mostly it will focus on *differences* and *advantages* rather than comparing available operators that almost the same across all over the place. 
 
-If you want to add new language or suggest an improvement, you are very welcome to open an [issue](https://github.com/timfayz/pipe-lang/issues). 
+If you want to add new language or suggest an improvement, feel free to open an [issue](https://github.com/timfayz/pipe-lang/issues). 
+
+**Work in progress..**
 
 <table>
     <tr> 
@@ -10,19 +13,69 @@ If you want to add new language or suggest an improvement, you are very welcome 
         <th> C/C++
         <th> Python
         <th> Go
+        <th> Java
+        <th> Wolfram
     </tr>
+    <tr>
+        <td colspan="6">Hello World</td>
+    </tr> 
     <tr> 
         <td>
-        <pre>.</pre>
+        <pre>code</pre>
         </td>        
         <td> 
-        <pre>.</pre>
+        <pre>code</pre>
         </td>
         <td>
-        <pre>.</pre>
+        <pre>code</pre>
         </td>
         <td>
-        <pre>.</pre>
+        <pre>code</pre>
         </td>
+        <td>
+        <pre>code</pre>
+        </td>
+        <td>
+        <pre>code</pre>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="6">Variable manipulations</td>
+    </tr>
+    <tr>
+        <td colspan="6">Type manipulations</td>
+    </tr>
+    <tr>
+        <td colspan="6">Structs, containers, classes</td>
+    </tr>
+    <tr>
+        <td colspan="6">Functions, procedures, methods</td>
+    </tr>
+    <tr>
+        <td colspan="6">Control flow</td>
+    </tr>
+    <tr>
+        <td colspan="6">Reflection</td>
+    </tr>
+    <tr>
+        <td colspan="6">String manipulation</td>
+    </tr>
+    <tr>
+        <td colspan="6">Meta-programming</td>
+    </tr>
+    <tr>
+        <td colspan="6">Object-oriented programming</td>
+    </tr>
+    <tr>
+        <td colspan="6">Functional programming</td>
+    </tr>
+    <tr>
+        <td colspan="6">Concurrent programming</td>
+    </tr>
+    <tr>
+        <td colspan="6">Expression-oriented programming</td>
+    </tr>
+    <tr>
+        <td colspan="6">Querying complex objects</td>
     </tr>
 </table>
