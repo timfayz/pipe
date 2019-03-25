@@ -1,5 +1,5 @@
 # References
-pipe is *scientific* project and evolving through the heritage of many pioneering computer scientists, industrial professionals, enthusiasts and underground hackers. It includes engineering projects, papers, recognizable books, esoteric blog posts and personal essays one can find across the Web. The listing below can be considered as a personal *reading stack*, *todos* or pipe's *bibliography*.
+pipe is *scientific* project and its meaning evolves through the huge heritage of pioneering computer scientists, industry professionals, software enthusiasts, ordinary users and underground hackers. The heritage includes engineering projects, academic papers, recognizable books, esoteric blog posts and personal essays anyone can stuck across the Web. The listing below can be considered as pipe *bibliography*.
 
 <!--
 Planning your PhD: https://www2.le.ac.uk/colleges/ssah/documents/research-training-presentations/DS%20Planning%20your%20PhD.pdf
@@ -11,32 +11,32 @@ Format:
 -->
 
 ## Readings
-1. **Gabriel Dos Reis**
-   1. A Principled, Complete, and Efficient Representation of C++
-2. **Paul Graham**
+1. **Paul Graham**
    1. On Lisp <!--Book-->
    2. [Revenge of the Nerds](http://paulgraham.com/icad.html) <!--Dec 18.18 / Done-->
    3. [Programming Bottom-Up](http://paulgraham.com/progbot.html) <!--Dec 24.18 / Done-->
    4. [To Start a Startup](http://paulgraham.com/start.html) <!--Dec 24.18 / Done-->
    5. The Hundred-Year Language
    6. Succinctness is Power
-3. **Bjarne Stroustrup**
-   1. Exception Handling for C++ (Andrew Koenig) <!--Jan 16.19-->
-4. **Gerald Jay Sussman and Hal Abelson**
-   1. Structure and Interpretation of Computer Programs <!--Book-->
-5. **Sergey Dmitriev** [JetBrains]
-   1. [Language Oriented Programming: The Next Programming Paradigm](http://www.onboard.jetbrains.com/is1/articles/04/10/lop/) <!--Bookook-->
-   2. JetBrains MPS (YouTube)
-6. **Noam Nisan, Shimon Schocken**
-   1. Papers from [Nand2Tetris](https://www.nand2tetris.org/papers)
-   2. The Elements of Computing Systems <!--Book-->
-7. **Niklaus Wirth**
+2. **Niklaus Wirth**
    1. Algorithms + Data Structures = Programs <!--Book-->
-8. **Donald Knuth**
+3. **Donald Knuth**
    1. The Art of Programming <!--Book-->
    2. Stanford GraphBase: A Platform for Combinatorial Computing <!--Book-->
-9.  **Dale Fisk**
-   3. Programming with Punched Cards <!--Nov 24.18-->
+4. **Bjarne Stroustrup**
+   1. Exception Handling for C++ (Andrew Koenig) <!--Jan 16.19-->
+5. **Gabriel Dos Reis**
+   1. A Principled, Complete, and Efficient Representation of C++
+6. **Gerald Jay Sussman and Hal Abelson**
+   1. Structure and Interpretation of Computer Programs <!--Book-->
+7. **Noam Nisan, Shimon Schocken**
+   1. Papers from [Nand2Tetris](https://www.nand2tetris.org/papers)
+   2. The Elements of Computing Systems <!--Book-->
+8. **Sergey Dmitriev** [JetBrains]
+   1. [Language Oriented Programming: The Next Programming Paradigm](http://www.onboard.jetbrains.com/is1/articles/04/10/lop/) <!--Bookook-->
+   2. JetBrains MPS (YouTube)
+9. **Dale Fisk**
+   1. Programming with Punched Cards <!--Nov 24.18-->
 10. **Adam Brooks Webber**
     1. Modern Programming Languages: A Practical Introduction <!--Book-->
 11. **Robert W. Sebesta**
@@ -78,7 +78,7 @@ List of educational and engineering projects that help pipe to round out the exp
 
 
 ## Influenced by
-List of languages and different formats against which pipe is comparing, inspiring and evolving:
+List of languages and different formats against which pipe draws its narrow line of logic:
 
 - REBOL, Red [Extension by DSL, GUI description]
 - Z notation, Eiffel [Constraint programming, Design by contract]
@@ -106,7 +106,7 @@ List of languages and different formats against which pipe is comparing, inspiri
 - Matt Phillips. Tanglewood Game Developer (Sega hacker)
 - Per Vognsen. Bitwise project
   
-[CS pioneers, Mathematicians & Giants]
+[CS pioneers and Mathematicians]
 - Niklaus Wirth. Oberon system, Pascal, Modula languages
 - Donald Knuth. TeX, Computer Modern typeface, Art of Programming, Literature programming
 - Edsger W. Dijkstra. Structured programming
@@ -121,6 +121,8 @@ List of languages and different formats against which pipe is comparing, inspiri
 - Matthias Müller-Prove. FLEX language
 - Francesc Hervada-Sala. Text engine
 
+<!--
 ### Unsorted
 - https://github.com/dotnet/roslyn/wiki/Roslyn
 - https://github.com/GabrielDosReis/ipr
+-->
