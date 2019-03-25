@@ -1,8 +1,9 @@
-# pipe Feature overview
+# Features overview
 [Return to the beginning](/README.md#get-started)
 
 Many of pipe features are quite unique and an abstract description alone hardly give you a hint. That's why every item feeded with sample code and practical considerations.
 
+<!--
 ### Quick jump
 1. Rethink programming notation
 2. [Code embedding or self-modifiable code]()
@@ -14,6 +15,7 @@ Many of pipe features are quite unique and an abstract description alone hardly 
 8. [Optional types]()
 9.  First-class X
 10. Interfaces
+-->
 
 ## Rethink programming notation
 **pipe** tries to gather best practices and give innovative view how modern programming language should look like. No semicolons, no tabular spaces, no structs, no classes, optional curly brackets and build-in (re)formatting. 
@@ -104,19 +106,25 @@ print(obj.p1, obj.p2)             -- "1, 2"
 print obj> .p1 add .p2            -- "3" (namespace carrying)
 ```
 
-### () = function, procedure, lambda, etc.
+### () or function, procedure, lambda..
 ```
+-- WIP
+funcName () :bool = {
+  ret 1 > 0
+}
                                   -- or
-  .IsObsolete () :bool = {
-    ret .age > 100
-  }            
+funcName () :bool =
+  ret 1 > 0          
                                   -- or
-  .IsObsolete () :bool => .age > 100
+funcName () :bool => 1 > 0
 ```
 
+<!--
 ### Recursive paradise
 ```
+WIP
 ```
+-->
 
 ### Compound types + named fields = X
 Want to create struct, class, container, unit, records or just a structure with named fields? There is no name for this anymore. Just use concept of **compound types** and **named fields**
@@ -430,7 +438,7 @@ print imported
 
 ### Quine
 ```
-simple example of producing a copy of its own source code 
+example of producing a copy of its own source 
 ```
 <!--
 ## What one's language should support
