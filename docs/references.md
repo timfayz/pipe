@@ -1,4 +1,6 @@
 # References
+[Return to the beginning](README.md#get-started)
+
 pipe is *scientific* project and its meaning evolves through the huge heritage of pioneering computer scientists, industry professionals, software enthusiasts, ordinary users and underground hackers. The heritage includes engineering projects, academic papers, recognizable books, esoteric blog posts and personal essays anyone can stuck across the Web. The listing below can be considered as pipe *bibliography*.
 
 <!--

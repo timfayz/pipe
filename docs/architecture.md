@@ -1,4 +1,5 @@
 # Architecture
+[Return to the beginning](README.md#get-started)
 
 ```nomnoml
 #font: mono

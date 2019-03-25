@@ -1,4 +1,5 @@
 # Transfer natural language to pipe
+[Return to the beginning](README.md#get-started)
 
 This document demonstrates how you can use your daily speech in terms of pipe. Every section briefly introduce the most important linguistic categories found in natural languages all over the place, gives real sentences and options to express by pipe. 
 
