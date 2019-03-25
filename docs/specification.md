@@ -1,15 +1,16 @@
-# The pipe Language Specification
+# pipe Language Specification
 
-This document describes core semantics and syntax of the language. It includes syntax, grammar rules, reserved keywords, predefined types, predefined functions, semantics, data and execution model, formatting, minimum set of functionality and high-level overview of the language. This specification should be *sufficient* a developer to implement its compiler or interpreter for desired platform. 
+This document describes semantic core and syntax of the language. It includes grammar rules, reserved keywords, predefined types, functions, data and execution model, formatting options, minimum set of functionality and high-level language overview. This specification should be *sufficient* developer to implement its compiler or interpreter for a given platform. 
 
-1. [Introduction]() (high-level overview)
+**Work in progress..**
+
+1. Introduction (high-level overview)
    1. Semantic review (intro to semantic core)
    2. Features review (minimal set of features)
    3. Syntax review (intro to physical representation)
    4. How to read Specification
-      1. Synonyms
-2. Mental model (for humans)
-   1. Turing machine, CPU
+2. Mental model (metal shift)
+   1. Turing, stack machine & CPU
    2. Programming paradigms
    3. Types
       1. static vs dynamic
@@ -17,15 +18,15 @@ This document describes core semantics and syntax of the language. It includes s
    4. Object, class, unit, container ...
    5. Function, procedure, method ...
    6. Encapsulation
-   7. Inheritance & Polymorphism
-   8. Interface / protocol
-   9.  References vs values
+   7. Inheritance and polymorphism
+   8. Interface and protocol
+   9.  References and values
    10. Concurrency 
    11. Exceptions
    12. Garbage collector
-   13. Testing
+   13. Tests and verification
    14. Module, package, file
-3. [Semantic model]()
+3. Semantic model
    1. Memory model
    2. Data model
       1. Types
@@ -35,24 +36,29 @@ This document describes core semantics and syntax of the language. It includes s
       2. Multiple results
       3. Variable arguments
       4. Default values
-      5. Invocation / call
+      5. Invocation or call
       6. Evaluation order
       7. Parallel execution
       8. Invariants, pre-/post-conditions
       9. Garbage collector
-4. [Syntax / grammar]()
-   1. Source files
-   2. Text / code
+4. Syntax and grammar
+   1. Compilation units
+   2. Lexeme categories
+      1. Types
+      2. Values
+      3. Expressions
+   3. Text
       1. Expression vs statements
       2. Definition vs assignments
-   3. Comments
-   4. Separators
-   5. Lexeme categories (?)
+   4. Comments
+   5. Separators
    6. Predefined operators
-      1. Logic
-      2. Math
-      3. Precedence
+      1. Logic operators
+      2. Math operators
+      3. Precedence table
 5. Implementation
+   1. Architecture 
+   2. Recommendations
 
 <!--
 C++ 3 catagories of language entities:
