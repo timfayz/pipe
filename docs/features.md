@@ -1,7 +1,9 @@
-# Feature overview
+# pipe Feature overview
+[Return to the beginning](/README.md#get-started)
+
 Many of pipe features are quite unique and an abstract description alone hardly give you a hint. That's why every item feeded with sample code and practical considerations.
 
-### Quick jumps
+### Quick jump
 1. Rethink programming notation
 2. [Code embedding or self-modifiable code]()
 3. [Reflection]()

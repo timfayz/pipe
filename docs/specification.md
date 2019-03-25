@@ -1,5 +1,5 @@
 # pipe Language Specification
-[Return to the beginning](README.md#get-started)
+[Return to the beginning](/README.md#get-started)
 
 This document describes semantic core and syntax of the language. It includes grammar rules, reserved keywords, predefined types, functions, data and execution model, formatting options, minimum set of functionality and high-level language overview. This specification should be *sufficient* developer to implement its compiler or interpreter for a given platform. 
 
