@@ -1,6 +1,9 @@
-# Architecture
-[Return to the beginning](README.md#get-started)
+# pipe Architecture
+[Return to the beginning](/README.md#get-started)
 
+**Work in progress..**
+
+<!--
 ```nomnoml
 #font: mono
 #fontSize: 10
@@ -11,7 +14,30 @@
 #padding: 10
 #spacing: 30
 
-[pipe]->[LLVM]
-[pipe]->[Webassembly]
-[pipe]->[Python]
+[<frame>pipe sources
+|text files
+|graphical (UML)
+|in-code snippets
+]->[front-end]
+
+
+[front-end]->[semantic core]
+[semantic core]<->[intermediate representation|optimizations]
+[intermediate representation]->[code generations]
+
+[code generations]->[back-ends]
+
+[<class>back-ends|
+LLVM|
+Webassembly|
+Java bytecode|
+HTML/XML|
+...
+]
+
+[intermediate representation]->[VM/Interpreter]
+[semantic core]->[Visualizer]
+[semantic core]->[Static analyzer]
 ```
+-->
+![](/docs/diagrams/architecture.png)
