@@ -1,5 +1,5 @@
 # Compare pipe to other languages
-[Return to the beginning](README.md#get-started)
+[Return to the beginning](/README.md#get-started)
 
 This document is intended for people who already know some programming languages and want to get a "taste" how different semantic constructions can be expressed by pipe. The examples do not pretend to be most ideomatic, precise and optimal. Also, there was no goal to cover every aspect of the language. Mostly it will focus on *differences* and *advantages* rather than comparing available operators that almost the same across all over the place. 
 
