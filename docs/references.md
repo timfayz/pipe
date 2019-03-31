@@ -1,7 +1,7 @@
 # References
 [Return to the beginning](/README.md#get-started)
 
-pipe is *scientific* project and its meaning evolves through the huge heritage of pioneering computer scientists, industry professionals, software enthusiasts, ordinary users and underground hackers. The heritage includes engineering projects, academic papers, recognizable books, esoteric blog posts and personal essays anyone can stuck across the Web. The listing below can be considered as pipe *bibliography*.
+pipe is *scientific* project and its meaning evolves through the huge heritage of pioneering computer scientists, industry professionals, software enthusiasts, ordinary users and underground hackers. The heritage includes engineering projects, academic papers, recognizable books, talks, esoteric blog posts and personal essays anyone can accidentals stuck across the Web. The listing below can be considered as pipe *bibliography*.
 
 <!--
 Planning your PhD: https://www2.le.ac.uk/colleges/ssah/documents/research-training-presentations/DS%20Planning%20your%20PhD.pdf
@@ -82,41 +82,45 @@ List of educational and engineering projects that help pipe to round out the exp
 ## Influenced by
 List of languages and different formats against which pipe draws its narrow line of logic:
 
+- Nim [Syntax, run-time AST manipulation]
+- Eve [Record and recursive based programming]
 - REBOL, Red [Extension by DSL, GUI description]
-- Z notation, Eiffel [Constraint programming, Design by contract]
-- Java [Virtual machine]
+- Lisp, Clojure, Schema [Unified syntax, Lists]
+- Z notation, Eiffel [Constraint, Defensive programming, Design by contract]
+- Java [Single inheritance, Abstract classes, Virtual machine]
 - JavaScript [Prototypes]
-- PHP, Perl [In-code injection]
-- C/C++, Go [Syntax, Interfaces, concurrent model]
-- Python [REPL]
-- Lua, Terra [Meta]
+- PHP, Hack, Perl [Embedded code]
+- C/C++, Go [Syntax, Interfaces, Concurrent model]
+- Python [Syntax, Indentation, REPL]
+- Lua, Terra [Meta programming]
 - Rust
 - Smalltalk
-- Ioke [DSLs]
+- Ioke [DSL generation]
+- Julia, Wolfram, Maxima [Everything is a symbol, Symbolic programming, Notebooks, High expressiveness]
+- Erlang, Elixir, Akka [Actor model, Sigils, Protocol vs Interface]
 - Parser generators (YACC, Bison - C/C++, CUP - Java, Happy - Haskell)
-- Lisp, Clojure, Schema [Unified syntax, Notions of lists]
-- Julia, Wolfram Language (Mathematica), Maxima [Everything is a symbol, high expressiveness]
-- Erlang, Elixir, Akka [Actor model, Sigils, Protocol == Interface]
-- mermaid, nomnoml
-- Markdown
+- XML/HTML [Structure description]
+- CSS [Visual description]
+- JSON, toml
+- mermaid, nomnoml [Relation description]
+- Markdown [Notebook sketches]
 - COBOL, ALGOL
-- [List of most common words](https://en.wikipedia.org/wiki/Most_common_words_in_English) (in English)
+- [Most common English words](https://en.wikipedia.org/wiki/Most_common_words_in_English)
 
 
 ## People
-[Game hackers]
-- Matt Phillips. Tanglewood Game Developer (Sega hacker)
-- Per Vognsen. Bitwise project
-  
 [CS pioneers and Mathematicians]
 - Niklaus Wirth. Oberon system, Pascal, Modula languages
 - Donald Knuth. TeX, Computer Modern typeface, Art of Programming, Literature programming
 - Edsger W. Dijkstra. Structured programming
-- Bertrand Meyer. Eiffel language. Design By Contract
+- Bertrand Meyer. Eiffel language, Design By Contract
 - Bjarne Stroustrup. C++
 
-[Software engineers]
-- Paul Graham. Co-founder Y combinator
+[Game hackers and Software engineers]
+- Matt Phillips. Tanglewood Game Developer
+- Per Vognsen. Bitwise project
+- Paul Graham. Co-founder of Y combinator
+- Bret Victor. Inventing on Principle, The Humane Representation of Thought
 - Joel Spolsky. Joel on Software, Stackoverflow, Trello
 
 [Independent researches]
@@ -125,6 +129,7 @@ List of languages and different formats against which pipe draws its narrow line
 
 <!--
 ### Unsorted
+- Mark Allen. Comparing Erlang and Go Concurrency
 - https://github.com/dotnet/roslyn/wiki/Roslyn
 - https://github.com/GabrielDosReis/ipr
 -->
