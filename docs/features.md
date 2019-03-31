@@ -1,7 +1,7 @@
-# Features overview
+# pipe Overview
 [Return to the beginning](/README.md#get-started)
 
-Many of pipe features are quite unique and an abstract description alone hardly give you a hint. That's why every item feeded with sample code and practical considerations.
+Every feature and concept pipe introduces might be unique and just an abstract description alone hardly give you a hint. That's why every item of this document is feeded with a sample code how one would *express* it by a code or *use* it under CLI. Under every title there might a tag list which points to common synonyms and programming concepts the language is going to cover. This document doesn't distinguish what is considered particular *feature* or *concept* because every new concept can be considered as a feature and vice versa. Just go along the text and examples.
 
 <!--
 ### Quick jump
@@ -15,28 +15,40 @@ Many of pipe features are quite unique and an abstract description alone hardly 
 8. [Optional types]()
 9.  First-class X
 10. Interfaces
+11. Actor model
 -->
 
 ## Rethink programming notation
-**pipe** tries to gather best practices and give innovative view how modern programming language should look like. No semicolons, no tabular spaces, no structs, no classes, optional curly brackets and build-in (re)formatting. 
+**pipe** tries to gather best practices and give innovative view how modern programming language might look like. 
 
-**pipe** is a balance b/w modern "sleekness" and time-proofed techniques that still serve us making less keystrokes, distinguish structure and write well-formed code.
+**pipe** is a balance between modern "sleekness" and time-proofed techniques that still serve us making less keystrokes, distinguish structure and write well-formed code.
 
-**pipe** strives to eliminate ambiguous interpretations, [overchoice phenomenon](https://en.wikipedia.org/wiki/Overchoice) and contradictions between visible code flow and implied semantics.
+**pipe** strives to eliminate ambiguous interpretations, [overchoice phenomenon](https://en.wikipedia.org/wiki/Overchoice) and contradictions between *visible* code flow and *implied* semantics.
 
-### Static / dynamic types
+**pipe** is an attempt to create *semantic core* such that its vital features, internal AST, "supported" models and syntax options can become an [independent](https://en.wikipedia.org/wiki/Language-agnostic) layer for further self-generation into existing languages, back-ends and platforms.
+
+### Static and dynamic types
+<sup>strict typing, dynamic typing, type inference, optional typing</sup>
+
+pipe takes an approach *everything has a type* and *type itself is a type in it's own name*. So if something in the code doesn't seem to be have a type, it actually means it is of type `:untyped`. 
+
+Type inference achieved by using a colon `:` to omit a name and infer it during a compilation. Truly dynamic (or `:untyped`) identifier can be created by assigning `=` different values to non-existent identifier. 
 ```
-name :str = "Timur"               -- explicit types
-pi := 3.14                        -- auto type detection
-x = 0                             -- dynamic types (expression-oriented programming)
+name :str = "Timur"               -- explicit type
+pi := 3.14                        -- auto type inference
+x = 0                             -- dynamic type (expression-oriented programming)
 x = (1, false, "hello", 3.14)     -- no error
+pi = 3                            -- error
+name = 't'                        -- error
 ```
 
-### Simple run-time reflection
+### Compile- and run-time reflection
+<sup>metaprogramming, introspection, indirect invocation</sup>
+
 pipe uses `%` symbol to reflect identifier and access its properties or "meta" information.
 ```
-print %x.Type == :untyped         -- true
-print (%x .Type, .Name)           -- ":untyped x"
+print %x.type == :untyped         -- true
+print (%x .type, .name)           -- ":untyped x"
 ```
 
 ### Contexted multi-line treatment
@@ -45,12 +57,12 @@ names :str[] =                    -- multiline assignment
   "John"
   "Robert"
   "Tim"
-                                  -- unevaluated raw string
+                                  -- multiline raw string assignment
 title :str = `
   These are my
     Lieblings Friends!
 `
-print 
+print                             -- multiline argument passing
   title 
   names..                         -- unfold `names` and print each item
 ```
