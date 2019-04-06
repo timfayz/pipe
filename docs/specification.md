@@ -7,10 +7,11 @@ This document describes semantic core and syntax of the language. It includes gr
 
 1. Introduction (high-level overview)
    1. Semantic review (intro to semantic core)
+      1. Limits
    2. Features review (minimal set of features)
    3. Syntax review (intro to physical representation)
    4. How to read Specification
-2. Mental model (metal shift)
+2. Mental model 
    1. Turing, stack machine & CPU
    2. Programming paradigms
    3. Types
@@ -24,9 +25,11 @@ This document describes semantic core and syntax of the language. It includes gr
    9.  References and values
    10. Concurrency 
    11. Exceptions
-   12. Garbage collector
-   13. Tests and verification
-   14. Module, package, file
+   12. Access to intrinsic properties
+   13. Execution model
+   14. Garbage collector
+   15. Tests and verification
+   16. Module, package, file
 3. Semantic model
    1. Memory model
    2. Data model
@@ -60,10 +63,3 @@ This document describes semantic core and syntax of the language. It includes gr
 5. Implementation
    1. Architecture 
    2. Recommendations
-
-<!--
-C++ 3 catagories of language entities:
-1. object declarations 
-2. expressions and operators
-3. types
--->

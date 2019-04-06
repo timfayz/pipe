@@ -104,9 +104,18 @@ List of languages and different formats against which pipe draws its narrow line
 - JSON, toml
 - mermaid, nomnoml [Relation description]
 - Markdown [Notebook sketches]
-- COBOL, ALGOL
+- COBOL, ALGOL, Fortran [First generations]
 - [Most common English words](https://en.wikipedia.org/wiki/Most_common_words_in_English)
-
+<!--
+Language references, standards or specifications
+- ML
+- Fortran
+- Python
+- Go
+- C++
+- C#
+- Java
+-->
 
 ## People
 [CS pioneers and Mathematicians]
@@ -129,6 +138,7 @@ List of languages and different formats against which pipe draws its narrow line
 
 <!--
 ### Unsorted
+- Ada Lovelace. Analytical engine. Charles Babbage
 - Mark Allen. Comparing Erlang and Go Concurrency
 - https://github.com/dotnet/roslyn/wiki/Roslyn
 - https://github.com/GabrielDosReis/ipr

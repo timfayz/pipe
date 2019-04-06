@@ -59,7 +59,7 @@ The era of emerging computer systems in 60-70s gave a whole new horizon for engi
 
 ## Why "pipe"?
 
-Real pipes have a good association with *medium* for a flow. What kind of flow you decide. It might be a character stream between processes, real water flow controlled by a software or just a though flow laid out on your code. Our task is to give you right fittings, high quality materials, different gauges for different purposes and do not *impede* building your own pipework. 
+Real pipes are well associated with a *medium*; medium for a *flow*. What kind of flow *you* decide. It might be a character stream between processes, it might be a real water flow controlled by a software or just a random thought flow laid down in the code. pipe's task is to give you right fittings, high quality materials, different gauges (for different purposes) and facilitate building your own pipework.
 
 
 

@@ -16,6 +16,8 @@ Every feature and concept pipe introduces might be unique and just an abstract d
 9.  First-class X
 10. Interfaces
 11. Actor model
+12. Access to intrinsic properties
+13. In-code translation for learning
 -->
 
 ## Rethink programming notation
