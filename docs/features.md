@@ -29,12 +29,18 @@ Every feature and concept pipe introduces might be unique and just an abstract d
 
 **pipe** is an attempt to create *semantic core* such that its vital features, internal AST, "supported" models and syntax options can become an [independent](https://en.wikipedia.org/wiki/Language-agnostic) layer for further self-generation into existing languages, back-ends and platforms.
 
-### Static and dynamic types
+### Types. Redefined
+pipe takes an approach that **_everything has a type_** and **_type itself is a type in it's own name_**. Types are central point of pipe system to solve many programming problems. It includes generics, type extension and inheritance, type conformance, optional typing and many more. In the next sections you will see practical examples and notions that pipe's typing system trying to cover.
+
+
+### Types. Dynamic vs static
 <sup>strict typing, dynamic typing, type inference, optional typing</sup>
 
-pipe takes an approach *everything has a type* and *type itself is a type in it's own name*. So if something in the code doesn't seem to be have a type, it actually means it is of type `:untyped`. 
+pipe can be both - strictly typed language when type explicitly/implicitly defined and fully dynamic when any notion of type is omited. Underlying implementation however always assign a type to any identifier it meets. If something doesn't seem to have a type, it is actually assigned as a type of `:untyped`. 
 
-Type inference achieved by using a colon `:` to omit a name and infer it during a compilation. Truly dynamic (or `:untyped`) identifier can be created by assigning `=` different values to non-existent identifier. 
+Automatic type inference achieved by using a colon `:` to omit a name and infer it at compile time. 
+
+Dynamic identifier (or `:untyped`) can be created by assigning `=` to non-existent identifier. 
 ```
 name :str = "Timur"               -- explicit type
 pi := 3.14                        -- auto type inference
@@ -44,8 +50,42 @@ pi = 3                            -- error
 name = 't'                        -- error
 ```
 
+### Types. Constraint vs interface vs protocol ..
+<sup>contract-based programming, type constraints, protocols</sup>
+
+pipe distinguish no difference among interfaces to conform certain type's behavior, nor constraint to be sure some type's properties are hold, nor protocols or contracts that basically the same as previous.
+```
+:constraint[T] =
+```
+
+### Interfaces
+<sup>merge to above</sup>
+
+In pipe there is no separate notion for **interface**. Instead, simple check if type *complies* to other type during casting or argument passing serve as a technique to generalize different concepts about the same thing.
+```
+IHumanoid = :{                    -- or Humanoider if you like
+  Speak ()
+  Blood :bool | Model :int
+}
+
+if :IHumanoid(me)                 -- check type compliance
+  print "Yes! I don't know if I'm Human or Robot!"
+
+Sayer (:IHumanoid h) = h.Speak()
+Sayer(me)                         -- "My name is Arnold", see previous section
+```
+
+### Type casting
+Type casting as simple as that:
+```
+x = 1
+y :int = :int(x)
+-- Hm... What if I want to check whether it can be casted or not? Otherwise, just set it to 0
+z :int = :int(x) == :int ? x : 0  -- solution
+```
+
 ### Compile- and run-time reflection
-<sup>metaprogramming, introspection, indirect invocation</sup>
+<sup>meta programming, introspection, indirect invocation</sup>
 
 pipe uses `%` symbol to reflect identifier and access its properties or "meta" information.
 ```
@@ -69,8 +109,9 @@ print                             -- multiline argument passing
   names..                         -- unfold `names` and print each item
 ```
 
-### Concise encapsulation
-Identifier should carry meaning! Now is it constant or variable, "private" or "protected" is derived from name.
+### Identifier names carry meaning
+
+pipes tries to infer as much information as possible from every character and position in your code in order to minify keystrokes. If so identifier should carry meaning! The identifier properties such as constant or variable, "private" or "protected" are derived from its name.
 ```
 CONS  := 256                      -- exported constant  
 _CONS := 1024                     -- unexported constant
@@ -120,17 +161,26 @@ print(obj.p1, obj.p2)             -- "1, 2"
 print obj> .p1 add .p2            -- "3" (namespace carrying)
 ```
 
-### () or function, procedure, lambda..
+### () equals to function, procedure, lambda, ..
+<sup>procedure, transition, function, lambda function</sup>
+
 ```
 -- WIP
+                                  -- draft 1
 funcName () :bool = {
   ret 1 > 0
 }
-                                  -- or
 funcName () :bool =
   ret 1 > 0          
-                                  -- or
+
+                                  -- draft 2
 funcName () :bool => 1 > 0
+
+                                  -- draft 3
+funcName := (:int) -> :int [
+  body
+]
+funcName := :int -> . + 10
 ```
 
 <!--
@@ -178,30 +228,6 @@ me:Human.Speak()                  -- "My name is Arnold"
 me.Speak()                        -- "My name is Arnold"
                                   -- order matters, :Human "overriding precedence" is higher
                                   -- when ambiguous just use explicit path (experimental)
-```
-
-### Type casting
-Type casting as simple as that:
-```
-x = 1
-y :int = :int(x)
--- Hm... What if I want to check whether it can be casted or not? Otherwise, just set it to 0
-z :int = :int(x) == :int ? x : 0  -- solution
-```
-
-### Interfaces
-In pipe there is no separate notion for **interface**. Instead, simple check if type *complies* to other type during casting or argument passing serve as a technique to generalize different concepts about the same thing.
-```
-IHumanoid = :{                    -- or Humanoider if you like
-  Speak ()
-  Blood :bool | Model :int
-}
-
-if :IHumanoid(me)                 -- check type compliance
-  print "Yes! I don't know if I'm Human or Robot!"
-
-Sayer (:IHumanoid h) = h.Speak()
-Sayer(me)                         -- "My name is Arnold", see previous section
 ```
 
 ### Overloading and overriding
