@@ -29,11 +29,13 @@ Every feature and concept pipe introduces might be unique and just an abstract d
 
 **pipe** is an attempt to create *semantic core* such that its vital features, internal AST, "supported" models and syntax options can become an [independent](https://en.wikipedia.org/wiki/Language-agnostic) layer for further self-generation into existing languages, back-ends and platforms.
 
-### Types. Redefined
+
+
+## Types. Redefined
 pipe takes an approach that **_everything has a type_** and **_type itself is a type in it's own name_**. Types are central point of pipe system to solve many programming problems. It includes generics, type extension and inheritance, type conformance, optional typing and many more. In the next sections you will see practical examples and notions that pipe's typing system trying to cover.
 
 
-### Types. Dynamic vs static
+### Dynamic vs static
 <sup>strict typing, dynamic typing, type inference, optional typing</sup>
 
 pipe can be both - strictly typed language when type explicitly/implicitly defined and fully dynamic when any notion of type is omited. Underlying implementation however always assign a type to any identifier it meets. If something doesn't seem to have a type, it is actually assigned as a type of `:untyped`. 
@@ -50,7 +52,10 @@ pi = 3                            -- error
 name = 't'                        -- error
 ```
 
-### Types. Constraint vs interface vs protocol ..
+### Homogeneous type system
+There is no difference between build-in types or user-defined all types follow and defined under the same rules. The only difference is that primitive types are well optimized for hardware and always be used during optimization stage when possible. However, to distinguish build-in types from user-defined, pipe made a little exception - they are lowercase despite being "imported" from stdlib which is forbidden in normal cases.
+
+### Constraint vs interface vs protocol ..
 <sup>contract-based programming, type constraints, protocols</sup>
 
 pipe distinguish no difference among interfaces to conform certain type's behavior, nor constraint to be sure some type's properties are hold, nor protocols or contracts that basically the same as previous.
@@ -75,7 +80,7 @@ Sayer (:IHumanoid h) = h.Speak()
 Sayer(me)                         -- "My name is Arnold", see previous section
 ```
 
-### Type casting
+### Casting
 Type casting as simple as that:
 ```
 x = 1
@@ -84,8 +89,8 @@ y :int = :int(x)
 z :int = :int(x) == :int ? x : 0  -- solution
 ```
 
-### Compile- and run-time reflection
-<sup>meta programming, introspection, indirect invocation</sup>
+### Reflection
+<sup>compile and run-time reflection, meta programming, introspection, indirect invocation</sup>
 
 pipe uses `%` symbol to reflect identifier and access its properties or "meta" information.
 ```
@@ -113,11 +118,11 @@ print                             -- multiline argument passing
 
 pipes tries to infer as much information as possible from every character and position in your code in order to minify keystrokes. If so identifier should carry meaning! The identifier properties such as constant or variable, "private" or "protected" are derived from its name.
 ```
-CONS  := 256                      -- exported constant  
+CONS  := 256                      -- exported constant (cannot be less than 2 characters)
 _CONS := 1024                     -- unexported constant
 Var   := "Hello"                  -- exported variable
 var   := "World"                  -- unexported variable
-                                  -- the same naming rules apply for all types of labels
+                                  -- the same naming rules apply to all types of identifiers
 ```
 
 ### Group assignment
@@ -322,9 +327,9 @@ strictSum (a, b :int) :int =
 ```
 
 ## Symbolic computation
-pipe proposes simple mechanism for converting mathematical expressions back and forth between LaTeX math notation and pipe's math expressions.
+<sup>symbolic mathematics, algebraic computations</sup>
 
-Tags: symbolic mathematics, algebraic computations
+pipe proposes simple mechanism for converting mathematical expressions back and forth between LaTeX math notation and pipe's math expressions.
 
 
 ## Lisp rebirth
@@ -351,11 +356,6 @@ ast.Import `
 `.Run()
 ```
 pipe highly discourage mixing both syntaxes under one roof. That's why it will require  either additional steps or explicit flag to use.
-
-
-
-## Homogeneous type system
-There is no difference between build-in types or user-defined all types follow and defined under the same rules. The only difference is that primitive types are well optimized for hardware and always be used during optimization stage when possible. However, to distinguish build-in types from user-defined pipe made a little exception - they are lowercase despite being "imported" from stdlib. It is forbidden in normal cases.
 
 
 

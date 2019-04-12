@@ -97,7 +97,8 @@ List of languages and different formats against which pipe draws its narrow line
 - Smalltalk
 - Ioke [DSL generation]
 - Julia, Wolfram, Maxima [Everything is a symbol, Symbolic programming, Notebooks, High expressiveness]
-- Erlang, Elixir, Akka [Actor model, Sigils, Protocol vs Interface]
+- Elixir, Akka [Actor model, Sigils, Protocol vs Interface]
+- Erlang, Haskell [Functional programming, Parallel execution model]
 - Parser generators (YACC, Bison - C/C++, CUP - Java, Happy - Haskell)
 - XML/HTML [Structure description]
 - CSS [Visual description]
@@ -115,6 +116,7 @@ Language references, standards or specifications
 - C++
 - C#
 - Java
+- Scala
 -->
 
 ## People
